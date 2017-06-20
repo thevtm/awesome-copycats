@@ -442,7 +442,7 @@ globalkeys = awful.util.table.join(
     --]]
     -- Prompt
     awful.key({ modkey }, "Return",
-              function () awful.util.spawn('j4-dmenu-desktop --dmenu="rofi -show run -i"') end,
+              function () awful.util.spawn('rofi -show drun -i') end,
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "BackSpace", function() awful.util.spawn('rofi -show window -i') end,
