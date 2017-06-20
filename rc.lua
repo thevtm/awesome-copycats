@@ -219,9 +219,9 @@ globalkeys = awful.util.table.join(
               {description="show help", group="awesome"}),
 
     -- Tag browsing
-    awful.key({ modkey,           }, "Up",   awful.tag.viewprev,
+    awful.key({ modkey, "Shift"   }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
-    awful.key({ modkey,           }, "Down",  awful.tag.viewnext,
+    awful.key({ modkey, "Shift"   }, "Right",  awful.tag.viewnext,
               {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Tab", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
@@ -233,7 +233,7 @@ globalkeys = awful.util.table.join(
               {description = "view  previous nonempty", group = "tag"}),
     --]]
 
-    -- Default client focus
+    --[[ Default client focus
     awful.key({ modkey,           }, "Left",
         function ()
             awful.client.focus.byidx( 1)
@@ -248,31 +248,31 @@ globalkeys = awful.util.table.join(
     ),
     --]]
 
-    --[[ By direction client focus
-    awful.key({ modkey }, "j",
+    -- By direction client focus
+    awful.key({ modkey }, "Down",
         function()
             awful.client.focus.bydirection("down")
             if client.focus then client.focus:raise() end
         end),
-    awful.key({ modkey }, "k",
+    awful.key({ modkey }, "Up",
         function()
             awful.client.focus.bydirection("up")
             if client.focus then client.focus:raise() end
         end),
-    awful.key({ modkey }, "h",
+    awful.key({ modkey }, "Left",
         function()
             awful.client.focus.bydirection("left")
             if client.focus then client.focus:raise() end
         end),
-    awful.key({ modkey }, "l",
+    awful.key({ modkey }, "Right",
         function()
             awful.client.focus.bydirection("right")
             if client.focus then client.focus:raise() end
         end),
     --]]
 
-    awful.key({ modkey,           }, "w", function () awful.util.mymainmenu:show() end,
-              {description = "show main menu", group = "awesome"}),
+    --awful.key({ modkey,           }, "w", function () awful.util.mymainmenu:show() end,
+    --          {description = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
     -- awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
