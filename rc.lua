@@ -445,8 +445,8 @@ globalkeys = awful.util.table.join(
               function () awful.util.spawn('rofi -show drun -i') end,
               {description = "run prompt", group = "launcher"}),
 
-    awful.key({ modkey }, "BackSpace", function() awful.util.spawn('rofi -show window -i') end,
-              {description = "switch windows", group = "launcher"}),
+    awful.key({ modkey }, "BackSpace", function() awful.util.spawn('rofi -i -show fb -modi fb:"~/.bin/rofi-fasd-browser"') end,
+              {description = "launch filebrowser on directory", group = "launcher"}),
 
     awful.key({ modkey }, "x",
               function ()
